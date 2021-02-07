@@ -1,0 +1,345 @@
+/* Fonts */
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans.woff2") format("woff2"),
+       url("../fonts/PTSans.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PT Sans";
+  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
+       url("../fonts/PTSans-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Variables */
+:root {
+  --basic-white: #ffffff;
+  --basic-black: #000000;
+  --basic-blue: #81b3d2;
+  --basic-cyan: #669EC0;
+  --basic-azure:#5496BD;
+  --basic-gray: #eeeeee;
+  --basic-light-grey: #f2f2f2;
+  --basic-light-black: #333333;
+  --basic-light-brown: #766357;
+  --basic-brown: #604E43;
+  --basic-dark-brown: #503E33;
+  --basic-dark-grey: #666666;
+}
+
+/* Global */
+.page-body {
+  min-width: 1200px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: var(--basic-black);
+  text-transform: uppercase;
+  background-color: var(--basic-white);
+  background-position: top center;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Header */
+.main-navigation {
+  line-height: 26px;
+  font-weight: 700;
+  color: var(--basic-black);
+  background-color: transparent;
+}
+
+.site-navigation {
+  list-style: none;
+}
+
+.site-navigation a {
+  color: var(--basic-black);
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus{
+  color: var(--basic-blue);
+}
+
+.site-navigation a:active {
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+/* Promo */
+.promo-sedona {
+  background-color: var(--basic-light-brown);
+  background-image: url(../img/rocks-of-sedona.jpg);
+  width: 1200px;
+  height: 509px;
+}
+
+
+/* Features */
+.features-header {
+  font-size: 21px;
+  line-height: 26px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.features-text {
+  line-height: 26px;
+  color: var(--basic-light-black);
+  text-align: center;
+}
+
+.features-list {
+  list-style: none;
+}
+
+.features-item {
+  text-align: center;
+}
+
+.features-item h3,
+.features-item h4 {
+  font-size: 21px;
+  line-height: 21px;
+  font-weight: 700;
+}
+
+.features-item p {
+  color: var(--basic-light-black);
+}
+
+.features-item-blue {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.features-item-blue p {
+  color: var(--basic-white);
+}
+
+.features-wrap {
+  background-color: var(--basic-gray);
+}
+
+/* Search-hotel */
+.search-hotel {
+  text-align: center;
+}
+
+.search-question {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.search-date {
+  line-height: 24px;
+  color: var(--basic-light-black);
+}
+
+.search-link {
+  color: var(--basic-white);
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.search-button {
+  background-color: var(--basic-light-brown);
+}
+
+.search-button:hover,
+.search-button:focus {
+  background-color: var(--basic-brown);
+}
+
+.search-button:active{
+  background-color: var(--basic-dark-brown);
+}
+
+.search-link:hover,
+.search-link:focus {
+  color: #ffffff;
+}
+
+.search-link:active {
+  opacity: 0.3;
+}
+
+/* Footer */
+
+.main-footer {
+  background-color: transparent;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.social-list {
+  list-style: none;
+  text-align: center;
+}
+
+/* Catalog */
+.promo-catalog {
+  background-color: var(--basic-light-brown);
+  background-image: url(../img/rocks-catalog.jpg);
+  width: 1200px;
+  height: 217px;
+}
+
+/* Choice */
+.choice {
+  color: var(--basic-white);
+}
+
+.choice-title {
+  font-size: 16px;
+  font-weight: 700;
+}
+.choice-list {
+  list-style: none;
+}
+
+.choice-item {
+  background-color: transparent;
+}
+
+/* Found */
+.found-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.found-subtitle {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.found-list {
+  list-style: none;
+}
+
+.found-item {
+  font-size: 12px;
+  line-height: 18px;
+  opacity: 0.3;
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.item-active {
+  color: var(--basic-blue);
+  border: none;
+  opacity: 1;
+}
+
+.found-item:focus,
+.found-item:hover {
+  color: var(--basic-blue);
+  opacity: 1;
+}
+
+.found-item:active {
+  color: var(--basic-black);
+  opacity: 1;
+  border: none;
+}
+
+/* Hotel */
+.hotel-list {
+  list-style: none;
+}
+
+.hotel-title {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.hotel-title:focus,
+.hotel-title:hover {
+  color: var(--basic-blue);
+}
+
+.hotel-title:active {
+  opacity: 0.3;
+}
+
+.hotel-subtitle {
+  color: var(--basic-light-black);
+}
+
+.hotel-rating {
+  background-color: var(--basic-light-grey);
+  color: var(--basic-dark-grey);
+}
+
+/* Button */
+.button {
+  font: inherit;
+  border: none;
+}
+
+.button-show {
+  background-color: transparent;
+}
+
+.button-show:focus,
+.button-show:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-black);
+}
+
+.button-info {
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+}
+
+.button-info:focus,
+.button-info:hover {
+  background-color: var(--basic-cyan);
+}
+
+.button-info:active {
+  background-color: var(--basic-azure);
+  opacity: 0.3;
+}
+
+.button-reserve {
+  color: var(--basic-white);
+  background-color: var(--basic-light-brown);
+}
+
+.button-reserve:hover,
+.button-reserve:focus {
+  background-color: var(--basic-brown);
+}
+
+.button-reserve:active {
+  background-color: var(--basic-dark-brown);
+  opacity: 0.3;
+}
