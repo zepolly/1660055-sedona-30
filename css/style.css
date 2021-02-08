@@ -90,9 +90,11 @@ img {
 }
 
 /* Promo */
-.promo-sedona {
+.promo {
   background-color: var(--basic-light-brown);
   background-image: url(../img/rocks-of-sedona.jpg);
+  margin-left: auto;
+  margin-right: auto;
   width: 1200px;
   height: 509px;
 }
@@ -203,16 +205,16 @@ img {
 }
 
 /* Catalog */
-.promo-catalog {
-  background-color: var(--basic-light-brown);
-  background-image: url(../img/rocks-catalog.jpg);
-  width: 1200px;
-  height: 217px;
-}
 
 /* Choice */
 .choice {
   color: var(--basic-white);
+  background-color: var(--basic-light-brown);
+  background-image: url(../img/rocks-catalog.jpg);
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  height: 217px;
 }
 
 .choice-title {
@@ -227,24 +229,24 @@ img {
   background-color: transparent;
 }
 
-/* Found */
-.found-title {
+/* Search-results */
+.search-results-title {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
 }
 
-.found-subtitle {
+.search-results-subtitle {
   font-weight: 700;
   font-size: 12px;
   line-height: 18px;
 }
 
-.found-list {
+.search-results-list {
   list-style: none;
 }
 
-.found-item {
+.search-results-item {
   font-size: 12px;
   line-height: 18px;
   opacity: 0.3;
@@ -257,20 +259,20 @@ img {
   opacity: 1;
 }
 
-.found-item:focus,
-.found-item:hover {
+.search-results-item:focus,
+.search-results-item:hover {
   color: var(--basic-blue);
   opacity: 1;
 }
 
-.found-item:active {
+.search-results-item:active {
   color: var(--basic-black);
   opacity: 1;
   border: none;
 }
 
 /* Hotel */
-.hotel-list {
+.hotels-list {
   list-style: none;
 }
 
@@ -289,7 +291,8 @@ img {
   opacity: 0.3;
 }
 
-.hotel-subtitle {
+.type-of-accommodation,
+.hotel-price {
   color: var(--basic-light-black);
 }
 
@@ -304,12 +307,12 @@ img {
   border: none;
 }
 
-.button-show {
+.button-submit {
   background-color: transparent;
 }
 
-.button-show:focus,
-.button-show:hover {
+.button-submit:focus,
+.button-submit:hover {
   background-color: var(--basic-white);
   color: var(--basic-black);
 }
