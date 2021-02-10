@@ -75,18 +75,22 @@ img {
   list-style: none;
 }
 
-.site-navigation a {
+.site-navigation-link {
   color: var(--basic-black);
 }
 
-.site-navigation a:hover,
-.site-navigation a:focus{
+.site-navigation-link:hover,
+.site-navigation-link:focus{
   color: var(--basic-blue);
 }
 
-.site-navigation a:active {
+.site-navigation-link:active {
   color: var(--basic-black);
   opacity: 0.3;
+}
+
+.active {
+  color: var(--basic-light-brown);
 }
 
 /* Promo */
