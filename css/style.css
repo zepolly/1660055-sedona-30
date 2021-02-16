@@ -149,7 +149,6 @@ img {
   margin-top: 51px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 586px 256px 256px;
 }
 
 .features-item {
@@ -163,14 +162,13 @@ img {
 }
 
 .features-list-recommendation {
-  grid-column: 1 / 4;
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 330px;
 }
 
 .features-item-bridge {
-  grid-column: 1 / 4;
+  grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 2fr 1fr;
 }
