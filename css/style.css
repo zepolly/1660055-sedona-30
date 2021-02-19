@@ -73,8 +73,8 @@ img {
 
 /* Header */
 .main-navigation {
-  display: grid;
-  grid-template-columns: 1fr 138px;
+  display: flex;
+  flex-direction: row;
   line-height: 26px;
   font-weight: 700;
   color: var(--basic-black);
@@ -83,12 +83,20 @@ img {
 
 .main-header-logo {
   justify-self: center;
+  position: absolute;
+  left: 50%;
 }
 
 .site-navigation {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  min-width: 1200px;
+  padding-top: 14px;
+  padding-bottom: 16px;
 }
 
 .site-navigation-link {
@@ -273,12 +281,22 @@ img {
 }
 
 .choice-title {
+  margin-bottom: 24px;
   font-size: 16px;
   font-weight: 700;
 }
 
+.choice-filters {
+  margin: 0;
+  padding: 0;
+  border: none;
+  margin-top: 26.5px;
+}
+
 .choice-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .choice-grid {
@@ -289,23 +307,47 @@ img {
 
 .choice-item {
   background-color: transparent;
+  margin-bottom: 25px;
+}
+
+.choice-item:nth-child(3n) {
+  margin-bottom: 32.5px;
 }
 
 /* Search-results */
+.search-results {
+  min-height: 86px;
+  display: flex;
+  text-decoration: row;
+}
+
 .search-results-title {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+  margin-left: 73px;
+  margin-top: 29px;
 }
 
 .search-results-subtitle {
   font-weight: 700;
   font-size: 12px;
   line-height: 18px;
+  margin-left: 46px;
+  margin-top: 31px;
+}
+
+.search-results-sorting {
+  display: flex;
 }
 
 .search-results-list {
+  margin: 0;
+  padding: 0;
   list-style: none;
+  display: flex;
+  margin-left: 40px;
+  margin-top: 32px;
 }
 
 .search-results-item {
@@ -313,6 +355,7 @@ img {
   line-height: 18px;
   opacity: 0.3;
   border-bottom: 1px dashed var(--basic-blue);
+  margin-right: 32px;
 }
 
 .item-active {
@@ -333,10 +376,14 @@ img {
   border: none;
 }
 
+.found {
+  list-style: none;
+}
+
 /* Hotel */
 .hotels-list {
   list-style: none;
-  height: 540px;
+  min-height: 540px;
   margin: 0;
   padding: 0;
 }
@@ -380,6 +427,8 @@ img {
 
 .button-submit {
   background-color: transparent;
+  color: var(--basic-white);
+  border: 1px solid var(--basic-white);
 }
 
 .button-submit:focus,
@@ -416,4 +465,9 @@ img {
 .button-reserve:active {
   background-color: var(--basic-dark-brown);
   opacity: 0.3;
+}
+
+.button-info .button-reserve {
+  display: flex;
+  margin-bottom: 30px;
 }
