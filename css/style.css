@@ -51,7 +51,7 @@
   font-weight: 400;
   color: var(--basic-black);
   text-transform: uppercase;
-  background-color: var(--basic-white);
+  background-color: var(--basic-light-grey);
   background-position: top center;
   min-height: 100%;
 }
@@ -142,6 +142,11 @@ img {
   width: 1200px;
   margin: 0 auto;
   padding: 0;
+  background-color: var(--basic-white);
+}
+
+.shadow {
+  box-shadow: 0 0 15px rgba(0, 0, 0, .5);
 }
 
 /* Promo */
@@ -150,7 +155,7 @@ img {
   background-image:
     url("../img/shape.svg"),
     url("../img/rocks-of-sedona.jpg");
-  background-position: 0% 100.5%, center;
+  background-position: 0% 100.3%, center;
   background-repeat: no-repeat;
   margin-left: auto;
   margin-right: auto;
@@ -159,16 +164,17 @@ img {
 }
 
 .promo img {
-  position: relative;
-  left: 371px;
-  top: 76px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 76.35px;
 }
 
 /* Features */
 
 .features-header {
-  margin: 41.5px auto 48px auto;
-  width: 520px;
+  margin: 41.5px auto 46px auto;
+  width: 470px;
   font-size: 21px;
   line-height: 26px;
   font-weight: 700;
@@ -176,6 +182,8 @@ img {
 }
 
 .features-text {
+  padding-right: 341px;
+  padding-left: 340px;
   line-height: 26px;
   color: var(--basic-light-black);
   text-align: center;
@@ -207,7 +215,6 @@ img {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  height: 330px;
 }
 
 .features-item-bridge {
@@ -224,96 +231,82 @@ img {
 }
 
 .features-item p {
+  padding-top: 11px;
   color: var(--basic-light-black);
-  width: 297px;
-  margin: 0 auto;
-  margin-top: 25px;
 }
 
 .features-item-blue {
+  padding: 29px 49px 40px 50px;
   background-color: var(--basic-blue);
   color: var(--basic-white);
 }
 
-.features-item-blue p {
-  color: var(--basic-white);
-  margin-left: auto;
-  margin-right: auto;
-  width: 320px;
+.features-item-blue h3,
+.features-wrap h3 {
+  padding: 0 75px 4px 74px;
 }
 
-.features-item-blue h3 {
-  width: 160px;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
+.features-item-blue p {
+  color: var(--basic-white);
 }
 
 .features-wrap {
+  padding: 26px 70px 54px 70px;
   background-color: var(--basic-gray);
-  height: 256px;
   text-align: center;
 }
 
+.features-item-blue p,
 .features-wrap p {
-  margin-left: auto;
-  margin-right: auto;
-  width: 258px;
+  padding-top: 9px;
 }
 
-.features-wrap h3 {
-  margin-top: 47px;
-  margin-left: auto;
-  margin-right: auto;
-  width: 119px;
-
-}
-
-.features-item h4 {
-  margin-top: 160px;
-}
-
-.features-item span,
-.features-item-blue span {
-  margin-top: 25px;
-  margin-bottom: 23px;
+.features-item .house,
+.features-item .box,
+.features-item .food {
+  padding: 0 50px 81px 50px;
 }
 
 .house::before {
   content: "";
-  position: absolute;
-  top: 60px;
-  left: 162px;
-  height: 72px;
+  height: 77px;
   width: 75px;
   display: block;
   background-image: url("../img/house.svg");
   background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 30px 113px 1px 113px;
 }
 
 .food::before {
   content: "";
-  position: absolute;
-  top: 60px;
-  left: 562px;
-  height: 72px;
+  height: 77px;
   width: 75px;
   display: block;
   background-image: url("../img/food.svg");
   background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 30px 113px 1px 113px;
+}
+
+.house p,
+.box p,
+.food p{
+  padding-bottom: 0;
+  padding-top: 0;
 }
 
 .box::before {
   content: "";
-  position: absolute;
-  top: 60px;
-  right: 168px;
   height: 77px;
   width: 64px;
   display: block;
   background-image: url("../img/box.svg");
   background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 30px 113px 1px 113px;
 }
+
 
 /* Search-hotel */
 .search-hotel {
@@ -321,27 +314,22 @@ img {
 }
 
 .search-question {
-  margin: 0 auto;
-  margin-top: 58px;
-  margin-bottom: 4px;
+  margin: 58px auto 4px auto;
   font-weight: 700;
   font-size: 30px;
   line-height: 24px;
 }
 
 .search-date {
-  margin-left: auto;
-  margin-right: auto;
+  margin: 36px auto 43px auto;
   width: 435px;
-  height: 95px;
   line-height: 24px;
   color: var(--basic-light-black);
-  margin-bottom: 0;
 }
 
 .search-link {
   display: block;
-  padding-top: 30px;
+  padding: 30px 125px 30px 125px;
   color: var(--basic-white);
   font-weight: 700;
   font-size: 21px;
@@ -353,7 +341,6 @@ img {
   margin-left: auto;
   margin-right: auto;
   width: 568px;
-  height: 86px;
 }
 
 .search-button:hover,
@@ -393,9 +380,8 @@ img {
 }
 
 .form-body {
-  height: 395px;
   margin: 0;
-  padding: 0;
+  padding: 55px 55px 55px 55px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -417,13 +403,10 @@ img {
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 30px;
   width: 458px;
   display: flex;
   justify-content: space-between;
-}
-
-.form-item-first {
-  margin-top: 55px;
 }
 
 .form-calendar {
@@ -494,9 +477,7 @@ img {
 }
 
 .search-button-form {
-  margin: 24px auto 55px auto;
-  width: 458px;
-  height: 58px;
+  padding: 16px 0 16px 0;
   color: var(--basic-white);
   background-color: var(--basic-blue);
   border: none;
@@ -560,17 +541,14 @@ img {
 /* Footer */
 
 .main-footer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  margin: 0 auto;
-  width: 1200px;
-  height: 120px;
+  width: 955px;
+  display: fixed;
+  z-index: 1;
+  margin: -120px auto 0 auto;
+  padding: 23px 125px 36px 120px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.9);
   font-size: 21px;
@@ -590,10 +568,6 @@ img {
   justify-self: center;
 }
 
-.footer-social {
-  width: 416px;
-}
-
 .social-list li {
   display: flex;
   align-items: center;
@@ -604,18 +578,24 @@ img {
 }
 
 .footer-contacts {
-  width: 251px;
-  height: 61px;
-  margin-left: 73px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
   font-weight: 700;
+  text-align: center;
+}
+
+.footer-contacts a {
+  display: block;
+}
+
+.footer-hashtag {
+  padding-bottom: 9px;
 }
 
 .footer-copyright {
   margin: 0;
-  margin-right: 73px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1004,8 +984,8 @@ img {
 }
 
 .button-info {
-  display: block;
-  text-align: center;
+  border: none;
+  text-transform: uppercase;
   width: 110px;
   height: 27px;
   background-color: var(--basic-blue);
