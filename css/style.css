@@ -542,7 +542,7 @@ img {
 
 .main-footer {
   width: 955px;
-  display: fixed;
+  display: absolute;
   z-index: 1;
   margin: -120px auto 0 auto;
   padding: 23px 125px 36px 120px;
@@ -1053,8 +1053,4 @@ img {
 .wrapper {
   margin-right: 73px;
   margin-left: 73px;
-}
-
-.footer {
-  position: relative;
 }
