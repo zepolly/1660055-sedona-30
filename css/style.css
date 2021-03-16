@@ -30,6 +30,9 @@
   --basic-dark-grey: #666666;
   --basic-grey-light: #EBEBEB;
   --basic-grey-dark: #e5e5e5;
+  --basic-extra-grey: #ababab;
+  --basic-extra-light-grey: #cfcfcf;
+  --basic-grayscale: #BDBBBC;
 }
 
 /* Global */
@@ -142,8 +145,12 @@ img {
   opacity: 0.3;
 }
 
-.active {
+.active,
+.active:hover,
+.active:focus,
+.active:active {
   color: var(--basic-light-brown);
+  pointer-events: none;
 }
 
 /* Container */
@@ -183,7 +190,7 @@ img {
 /* Features */
 
 .features-header {
-  margin: 44px auto 46px auto;
+  margin: 44px auto 44px auto;
   width: 470px;
   font-size: 21px;
   line-height: 26px;
@@ -203,7 +210,7 @@ img {
   list-style: none;
   margin: 0;
   padding: 0;
-  margin-top: 49px;
+  margin-top: 50px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
@@ -280,7 +287,7 @@ img {
 
 .features-wrap {
   max-width: 280px;
-  padding: 25px 60px 42px 60px;
+  padding: 25px 60px 40px 60px;
   background-color: var(--basic-gray);
   text-align: center;
 }
@@ -290,13 +297,13 @@ img {
 }
 
 .features-wrap p {
-  margin-top: 25px;
+  margin-top: 24px;
 }
 
 .features-item .house,
 .features-item .box,
 .features-item .food {
-  padding: 56px 50px 70px 50px;
+  padding: 56px 50px 68px 50px;
 }
 
 .house::before {
@@ -554,13 +561,19 @@ img {
   font-size: 21px;
 }
 
-.form-date:hover {
+.form-date:hover,
+.input-number:hover {
   background-color: var(--basic-grey-light);
 }
 
-.form-date:focus {
+.form-date:focus,
+.input-number:focus {
   background-color: var(--basic-white);
   border: 2px solid var(--basic-grey-dark);
+}
+
+.input-number:active {
+  background-color: var(--basic-white);
 }
 
 .plus-child:hover,
@@ -669,6 +682,14 @@ img {
   background-color: var(--basic-blue);
 }
 
+.social-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  width: 46px;
+}
+
 .social-list li:hover,
 .social-list li:focus {
   background-color: var(--basic-cyan);
@@ -743,7 +764,7 @@ img {
 }
 
 .footer-copyright a:active path {
-  fill: #BDBBBC;
+  fill: var(--basic-grayscale);
 }
 
 .author {
@@ -767,7 +788,7 @@ img {
 }
 
 .choice-title {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   font-size: 16px;
   font-weight: 700;
 }
@@ -798,10 +819,6 @@ img {
   margin-bottom: 25px;
 }
 
-.choice-item:nth-child(3n) {
-  margin-bottom: 32px;
-}
-
 .choice-item label {
   position: relative;
   display: block;
@@ -814,7 +831,7 @@ img {
   margin-top: 14px;
 }
 
-.filter-input-checkbox + label::before {
+.filter-input-checkbox:not(:disabled) + label::before {
   content: "";
   position: absolute;
   left: -42px;
@@ -846,8 +863,7 @@ img {
   background-repeat: no-repeat;
 }
 
-.filter-input-checkbox:checked,
-.filter-input-checkbox:disabled+label:before {
+.filter-input-checkbox:checked:disabled+label:before {
   content: "";
   position: absolute;
   top: 0px;
@@ -890,10 +906,10 @@ img {
   height: 3px;
   padding: 0;
   border: 7px solid var(--basic-white);
-  background-color: #ababab;
+  background-color: var(--basic-extra-grey);
   border-radius: 50%;
-  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
-          box-shadow: 0 2px 1px 0 #cfcfcf;
+  -webkit-box-shadow: 0 2px 1px 0 var(--basic-extra-light-grey);
+          box-shadow: 0 2px 1px 0 var(--basic-extra-light-grey);
   cursor: pointer;
 }
 
@@ -931,7 +947,7 @@ img {
 }
 
 .number-to {
-  margin-left: -5px;
+  margin-left: 2px;
   padding-top: 6px;
   padding-bottom: 8px;
   background-color: transparent;
@@ -942,7 +958,7 @@ img {
 }
 
 .number-from {
-  margin-left: -5px;
+  margin-left: -3px;
   padding-top: 7px;
   padding-bottom: 8px;
   background-color: transparent;
@@ -953,7 +969,7 @@ img {
 }
 
 .button-submit-show {
-  margin-bottom: 32px;
+  margin-bottom: 33px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1068,9 +1084,29 @@ img {
 .found-down {
   width: 11px;
   height: 10px;
-  background-image: url("../img/icon-down-dir.svg");
+  background-image: url("../img/icon-down.svg");
   background-repeat: no-repeat;
 }
+
+.found-up:focus,
+.found-up:hover{
+  background-image: url("../img/icon-up-hover.svg");
+}
+
+.found-down:focus,
+.found-down:hover {
+  background-image: url("../img/icon-down-hover.svg");
+}
+
+.found-up:active {
+  background-image: url("../img/icon-up-active.svg");
+}
+
+.found-down,
+.found-active {
+  background-image: url("../img/icon-down-dir.svg");
+}
+
 
 /* Hotel */
 .hotels-list {
@@ -1241,7 +1277,7 @@ img {
   display: block;
   margin-top: 15px;
   padding-top: 3px;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
   text-align: center;
   border: none;
   text-transform: uppercase;
@@ -1265,7 +1301,7 @@ img {
   display: block;
   margin-top: 15px;
   padding-top: 3px;
-  padding-bottom: 4px;
+  padding-bottom: 3px;
   text-align: center;
   font-weight: 700;
   display: block;
