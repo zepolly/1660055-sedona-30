@@ -448,6 +448,22 @@ img {
   padding-right: 35px;
   border: none;
   text-transform: uppercase;
+  font-weight: 700;
+}
+
+input::-moz-placeholder { 
+  color: var(--basic-black); 
+  font-weight: 700;
+
+}
+input::-webkit-input-placeholder { 
+  color: var(--basic-black); 
+  font-weight: 700;
+}
+
+input::placeholder { 
+  color: var(--basic-black); 
+  font-weight: 700;
 }
 
 .form-item {
@@ -624,7 +640,7 @@ img {
 .main-footer {
   width: 1054px;
   z-index: 1;
-  margin: -120px auto 0 auto;
+  margin: 0 auto 0 auto;
   padding: 35px 73px 36px 73px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -640,6 +656,10 @@ img {
   background-color: rgba(255, 255, 255, 0.9);
   font-size: 21px;
   line-height: 26px;
+}
+
+.footer-index {
+  margin-top: -120px;
 }
 
 .footer-social {
@@ -924,7 +944,7 @@ img {
 }
 
 .choice-price {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -939,8 +959,8 @@ img {
 .wrap {
   content: "";
   position: absolute;
-  left: 158px;
-  top: 4px;
+  left: 156px;
+  top: 5px;
   width: 2px;
   height: 22px;
   background-color: var(--basic-white);
@@ -949,7 +969,7 @@ img {
 .number-to {
   margin-left: 2px;
   padding-top: 6px;
-  padding-bottom: 8px;
+  padding-bottom: 9px;
   background-color: transparent;
   border: none;
   text-align: center;
@@ -958,9 +978,9 @@ img {
 }
 
 .number-from {
-  margin-left: -3px;
+  margin-left: -1px;
   padding-top: 7px;
-  padding-bottom: 8px;
+  padding-bottom: 9px;
   background-color: transparent;
   border: none;
   text-align: center;
@@ -969,7 +989,7 @@ img {
 }
 
 .button-submit-show {
-  margin-bottom: 33px;
+  margin-bottom: 32px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1100,6 +1120,10 @@ img {
 
 .found-up:active {
   background-image: url("../img/icon-up-active.svg");
+}
+
+.found-down:active {
+  background-image: url("../img/icon-down-dir.svg");
 }
 
 .found-down,
@@ -1256,9 +1280,9 @@ img {
 
 .button-submit {
   padding-top: 5px;
-  padding-bottom: 5px;
-  width: 134px;
-  margin-left: -9px;
+  padding-bottom: 6px;
+  width: 137px;
+  margin-left: -12px;
   text-transform: uppercase;
   background-color: transparent;
   color: var(--basic-white);
