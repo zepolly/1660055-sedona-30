@@ -180,7 +180,7 @@ img {
   background-repeat: no-repeat;
   padding-top: 77px;
   padding-bottom: 81px;
-  background-size: cover, none;
+  background-size: 100%, cover;
 }
 
 .promo img {
@@ -452,12 +452,27 @@ img {
   font-weight: 700;
 }
 
-input::-moz-placeholder { 
+input::-webkit-input-placeholder { 
   color: var(--basic-black); 
   font-weight: 700;
-
 }
-input::-webkit-input-placeholder { 
+
+input[type="text"]::-moz-placeholder { 
+  color: var(--basic-black); 
+  font-weight: 700;
+}
+
+input[type="text"]:-moz-placeholder { 
+  color: var(--basic-black); 
+  font-weight: 700;
+}
+
+input:-ms-input-placeholder { 
+  color: var(--basic-black); 
+  font-weight: 700;
+}
+
+input::-ms-input-placeholder { 
   color: var(--basic-black); 
   font-weight: 700;
 }
@@ -537,6 +552,7 @@ input::placeholder {
 
 .minus-adult {
   background-image: url("../img/minus.svg");
+  background-repeat: no-repeat;
   top: 17.5px;
   left: 125px;
   width: 12px;
@@ -545,6 +561,7 @@ input::placeholder {
 
 .plus-adult {
   background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
   top: 13.5px;
   left: 200px;
   width: 11px;
@@ -553,6 +570,7 @@ input::placeholder {
 
 .minus-child {
   background-image: url("../img/minus.svg");
+  background-repeat: no-repeat;
   top: 17.5px;
   right: 88px;
   width: 12px;
@@ -561,6 +579,7 @@ input::placeholder {
 
 .plus-child {
   background-image: url("../img/plus.svg");
+  background-repeat: no-repeat;
   top: 13.5px;
   right: 15px;
   width: 11px;
