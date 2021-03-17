@@ -6,6 +6,7 @@
   font-weight: 400;
   font-style: normal;
 }
+
 @font-face {
   font-family: "PT Sans";
   src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
@@ -179,6 +180,7 @@ img {
   background-repeat: no-repeat;
   padding-top: 77px;
   padding-bottom: 81px;
+  background-size: cover, none;
 }
 
 .promo img {
@@ -188,7 +190,6 @@ img {
 }
 
 /* Features */
-
 .features-header {
   margin: 44px auto 44px auto;
   width: 470px;
@@ -262,7 +263,7 @@ img {
 }
 
 .features-item-blue {
-  padding: 26px 49px 39px 50px;
+  padding: 26px 46px 39px 46px;
   background-color: var(--basic-blue);
   color: var(--basic-white);
 }
@@ -635,12 +636,12 @@ input::placeholder {
   color: rgba(255, 255, 255,0.3);
   border: none;
 }
-/* Footer */
 
+/* Footer */
 .main-footer {
   width: 1054px;
   z-index: 1;
-  margin: 0 auto 0 auto;
+  margin: auto auto 0 auto;
   padding: 35px 73px 36px 73px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -790,6 +791,7 @@ input::placeholder {
 .author {
   margin-right: 8px;
 }
+
 /* Catalog */
 
 /* Choice */
@@ -859,7 +861,6 @@ input::placeholder {
   width: 23px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
-
 }
 
 .filter-input-checkbox:checked + label::before {
@@ -920,12 +921,12 @@ input::placeholder {
 
 .range-controls .toggle {
   position: absolute;
-  top: -10px;
+  top: -9px;
   left: 0;
   width: 3px;
   height: 3px;
   padding: 0;
-  border: 7px solid var(--basic-white);
+  border: 8px solid var(--basic-white);
   background-color: var(--basic-extra-grey);
   border-radius: 50%;
   -webkit-box-shadow: 0 2px 1px 0 var(--basic-extra-light-grey);
@@ -1018,7 +1019,7 @@ input::placeholder {
 }
 
 .search-results-subtitle {
-  font-weight: 700;
+  font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   margin-top: 20px;
@@ -1317,7 +1318,7 @@ input::placeholder {
 
 .button-info:active {
   background-color: var(--basic-azure);
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-reserve {
@@ -1342,7 +1343,7 @@ input::placeholder {
 
 .button-reserve:active {
   background-color: var(--basic-dark-brown);
-  opacity: 0.3;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 .button-info .button-reserve {
