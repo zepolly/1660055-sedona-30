@@ -1,16 +1,16 @@
 /* Fonts */
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/PTSans.woff2") format("woff2"),
-       url("../fonts/PTSans.woff") format("woff");
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+       url("../fonts/ptsans.woff") format("woff");
   font-weight: 400;
   font-style: normal;
 }
 
 @font-face {
   font-family: "PT Sans";
-  src: url("../fonts/PTSans-Bold.woff2") format("woff2"),
-       url("../fonts/PTSans-Bold.woff") format("woff");
+  src: url("../fonts/ptsans-bold.woff2") format("woff2"),
+       url("../fonts/ptsans-bold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
 }
@@ -34,6 +34,9 @@
   --basic-extra-grey: #ababab;
   --basic-extra-light-grey: #cfcfcf;
   --basic-grayscale: #BDBBBC;
+  --basic-translucent-black: rgba(0, 0, 0, 0.5);
+  --basic-translucent-grey: rgba(255, 255, 255, 0.3);
+  --basic-translucent-white: rgba(255, 255, 255, 0.9);
 }
 
 /* Global */
@@ -166,8 +169,8 @@ img {
   position: relative;
   width: 1200px;
   margin: 0 auto;
-  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .5);
-          box-shadow: 0 0 15px rgba(0, 0, 0, .5);
+  -webkit-box-shadow: 0 0 15px var(--basic-translucent-black);
+          box-shadow: 0 0 15px var(--basic-translucent-black);
 }
 
 /* Promo */
@@ -605,7 +608,7 @@ input::placeholder {
 .form-date:focus,
 .input-number:focus {
   background-color: var(--basic-white);
-  border: 2px solid var(--basic-grey-dark);
+  box-shadow: inset 0 0 0 2px var(--basic-grey-dark);
 }
 
 .input-number:active {
@@ -613,35 +616,40 @@ input::placeholder {
 }
 
 .plus-child:hover,
-.plus-adult:hover {
+.plus-adult:hover,
+.plus-child:focus,
+.plus-adult:focus {
   background-image: url("../img/plus-black.svg");
   border: none;
 }
 
-.plus-child:focus,
-.plus-adult:focus {
+.plus-child:active,
+.plus-adult:active {
   background-image: url("../img/plus-blue.svg");
   border: none;
 }
 
 .minus-child:hover,
-.minus-adult:hover {
+.minus-adult:hover,
+.minus-child:focus,
+.minus-adult:focus  {
   background-image: url("../img/minus-black.svg");
   border: none;
 }
 
-.minus-child:focus,
-.minus-adult:focus {
+.minus-child:active,
+.minus-adult:active {
   background-image: url("../img/minus-blue.svg");
   border: none;
 }
 
-.form-calendar:hover {
+.form-calendar:hover,
+.form-calendar:focus {
   background-image: url("../img/calendar-black.svg");
   border: none;
 }
 
-.form-calendar:focus {
+.form-calendar:active {
   background-image: url("../img/calendar-blue.svg");
   border: none;
 }
@@ -652,7 +660,7 @@ input::placeholder {
 
 .search-button-form:active {
   background-color: var(--basic-azure);
-  color: rgba(255, 255, 255,0.3);
+  color: var(--basic-translucent-grey);
   border: none;
 }
 
@@ -673,7 +681,7 @@ input::placeholder {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: var(--basic-translucent-white);
   font-size: 21px;
   line-height: 26px;
 }
@@ -730,16 +738,16 @@ input::placeholder {
   width: 46px;
 }
 
-.social-list li:hover,
-.social-list li:focus {
+.social-item:hover,
+.social-item:focus {
   background-color: var(--basic-cyan);
 }
 
-.social-list li:active {
+.social-item:active {
   background-color: var(--basic-azure);
 }
-.social-list li:active path {
-  fill: rgba(255, 255, 255, 0.3);
+.social-item:active path {
+  fill: var(--basic-translucent-grey);
 }
 
 .footer-contacts {
@@ -798,12 +806,12 @@ input::placeholder {
           justify-content: center;
 }
 
-.footer-copyright a:hover path,
-.footer-copyright a:focus path {
+.footer-copyright-link:hover path,
+.footer-copyright-link:focus path {
   fill: var(--basic-blue);
 }
 
-.footer-copyright a:active path {
+.footer-copyright-link:active path {
   fill: var(--basic-grayscale);
 }
 
@@ -928,7 +936,7 @@ input::placeholder {
 .range-controls .scale {
   margin-top: 20px;
   height: 2px;
-  background-color: rgba(255, 255, 255,0.3);
+  background-color: var(--basic-translucent-grey);
   Width: 317px;
 }
 
@@ -955,8 +963,7 @@ input::placeholder {
 
 .toggle:focus,
 .toggle:hover {
-  width: 5px;
-  height: 5px;
+  border: 10px solid var(--basic-white);
 }
 
 .range-controls .toggle-max {
@@ -1337,7 +1344,7 @@ input::placeholder {
 
 .button-info:active {
   background-color: var(--basic-azure);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-translucent-grey);
 }
 
 .button-reserve {
@@ -1362,7 +1369,7 @@ input::placeholder {
 
 .button-reserve:active {
   background-color: var(--basic-dark-brown);
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--basic-translucent-grey);
 }
 
 .button-info .button-reserve {
